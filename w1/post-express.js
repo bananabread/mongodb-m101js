@@ -5,6 +5,7 @@ var express = require('express'),
 app.engine('html', cons.swing);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
+app.use(express.bodyParser());
 app.use(app.router);
 
 // Handler for internal server errors
